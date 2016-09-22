@@ -1,4 +1,4 @@
-﻿
+
 //Vérification de la connexion
 function checkConnection() 
 {
@@ -272,6 +272,13 @@ function callAnotherPage(name)
 				case "error_horsConnection":
 				
 				$('#corps').load("modules/"+name+".html");
+				break;
+                    
+                    case "inscription" :
+                    
+				
+				$('#corps').load("modules/inscription.html");
+				
 				break;
 				
 				case "login_forgotPassword":
