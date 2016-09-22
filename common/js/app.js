@@ -335,7 +335,7 @@ function callAnotherPage(name)
 				break;
 				
 			
-				case "accueil" :
+				case "SimonDebray" :
 				console.log("test Accueil 3");
 				$('#corps').load("modules/"+name+".html");
 				//$('#banner').load("modules/banner.html");
