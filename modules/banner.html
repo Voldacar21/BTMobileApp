@@ -1,0 +1,46 @@
+<ul class="banner_menu">
+	<li id="1" onClick="callAnotherPage('accueil_actualite');">
+		<img class="banner_icone" src="common/img/banner_home.png" />
+	</li >
+	
+		
+	<li id="4" onClick="callAnotherPage('jobs');">
+		<img  class="banner_icone" src="common/img/banner_offres.png" />
+	</li>
+	
+	
+	<li id="3">
+		<img  class="banner_icone" src="common/img/banner_pdt.png" style="height: 33px;margin-top: 3px;"/>
+	</li>
+
+	
+	<li id="2" onClick="callAnotherPage('profil');">
+		<img  class="banner_icone" src="common/img/banner_profil.png" />
+	</li>
+	
+	
+	<li id="5" onClick="callAnotherPage('settings');">
+		<img  class="banner_icone" src="common/img/banner_reglages.png" />
+	</li>
+	
+	<!--
+		<li onClick="logout();">
+		<img src="common/img/logout.png" />
+		</li>
+		
+	-->
+</ul>
+
+<script>
+	
+	$('.banner_menu > li').bind( 'click' , function(e)
+	{
+		console.log(e);
+		if (e.currentTarget.id!="3")
+		{
+			$('.banner_menu > li').css({'background-color':'#22bed5'});
+			$(this).css({'background-color':'#479aa6'});
+		}
+	} );
+	
+</script>
