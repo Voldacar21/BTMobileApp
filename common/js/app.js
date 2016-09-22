@@ -56,6 +56,7 @@ function chargement_onDeviceReady()
 
 function checkToken(callback)
 {
+	console.log("test Accueil 0");
 	if(checkConnection() == 'online')
 	{
 		var token = getLocalStorage('token');
@@ -187,14 +188,20 @@ function connection_auto(name)
 
 function callAnotherPage(name)
 {
-	checkToken(function(session)
-	{
-		if(session.call)
-		{
+	console.log("test Accueil 1");
+	/* checkToken(function(session)
+	{*/
+	var call = false;
+		if(call)
+		{ 
 
 			switch (name)
 			{
-				
+				case "accueil" :
+				console.log("test Accueil 2");
+				$('#sousPage').load("modules/"+name+".html");
+				$('#banner').load("modules/banner.html");
+				break;
 				case "accueil_actualite" :
 				
 				$('#sousPage').load("modules/"+name+".html");
@@ -278,9 +285,62 @@ function callAnotherPage(name)
 		}
 		else
 		{
-
+			console.log("test Accueil 2");
 			switch (name)
 			{
+				case "Vubs" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				case "nem95" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				case "Naelalkha" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				case "vasach" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				case "Thomzerr" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				case "chriis95" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				case "Bilal-design" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				case "ArnaudDoubremelle" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				case "victor" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				
+			
+				case "accueil" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				//$('#banner').load("modules/banner.html");
+				break;
+				
 				// DECONNEXION :
 				case "login":
 				
@@ -306,7 +366,7 @@ function callAnotherPage(name)
 				break;
 			}
 		}
-	});
+	/*}); */
 }
 
 function setLocalStorage(elem, data)
@@ -491,7 +551,7 @@ function getJobs(mode, callback)
 
 function connection() 
 {
-	setLocalStorage('token', '');
+	/* setLocalStorage('token', '');
 	
 	var user = $('#username').val();
 	var pass = $('#password').val();
@@ -583,8 +643,8 @@ function connection()
 			
 		}
 		
-	}
-	
+	} */
+	callAnotherPage("wallfb");
 	
 } 
 
