@@ -341,6 +341,12 @@ function callAnotherPage(name)
 				//$('#banner').load("modules/banner.html");
 				break;
 				
+				case "accueil" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				$('#banner').load("modules/banner.html");
+				break;
+				
 				// DECONNEXION :
 				case "login":
 				
