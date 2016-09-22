@@ -1,4 +1,4 @@
-﻿
+
 //Vérification de la connexion
 function checkConnection() 
 {
@@ -273,6 +273,13 @@ function callAnotherPage(name)
 				
 				$('#corps').load("modules/"+name+".html");
 				break;
+                    
+                    case "inscription" :
+                    
+				
+				$('#corps').load("modules/inscription.html");
+				
+				break;
 				
 				case "login_forgotPassword":
 				
@@ -335,10 +342,16 @@ function callAnotherPage(name)
 				break;
 				
 			
-				case "accueil" :
+				case "SimonDebray" :
 				console.log("test Accueil 3");
 				$('#corps').load("modules/"+name+".html");
 				//$('#banner').load("modules/banner.html");
+				break;
+				
+				case "accueil" :
+				console.log("test Accueil 3");
+				$('#corps').load("modules/"+name+".html");
+				$('#banner').load("modules/banner.html");
 				break;
 				
 				// DECONNEXION :

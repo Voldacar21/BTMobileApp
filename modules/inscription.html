@@ -10,9 +10,35 @@
 					<img src="common/img/logo_image.png" alt="logo-appli" id="login_logo"></img>
 					
 					<form class="formulaire_content_fields">
+					<div class="input-container">
+                        <div class="input-1">
+							<input type="text" id="nom" required="required"/>
+							<label>Nom</label>
 						
 						<div class="input-container">
-							<input type="text" id="username" required="required"/>
+							<input type="text" id="prenom" required="required"/>
+							<label>Prénom</label>
+						</div>
+						<div class="input-container">
+							<input type="text" id="adresse" required="required"/>
+							<label>Adresse</label>
+						</div>
+						<div class="input-container">
+							<input type="text" id="ville" required="required"/>
+							<label>Ville</label>
+						</div>
+						<div class="input-container">
+							<input type="text" id="postal" required="required"/>
+							<label>Code Postal</label>
+						</div>
+					</div>
+					<div class="input-container">
+							<input type="text" id="pseudo" required="required"/>
+							<label>Pseudo</label>
+						</div>
+						
+						<div class="input-container">
+							<input type="text" id="mail" required="required"/>
 							<label>Adresse mail</label>
 						</div>
 						
@@ -24,28 +50,16 @@
 						
 						<div id="error_login"></div>
 						
-						<div class="keeplogin"> 
-							
-							<div id="login_check_box" data-checked="false">
-								<img id="login_check_box_enable" src="common/img/login_check-blanc.png" />
-							</div>
-							<div id="keeplogin_label">
-								Mémoriser le mot de passe
-							</div>
-							
-						</div>
 						
 						<div class="button-container">
-							<button type="button" value="Login" id="log" onClick="callAnotherPage('accueil')"><span style="">Se connecter</span><img src="common/img/login_arrow.png" id="login_arrow"/></button>
+							<button type="button" value="Login" id="log" onClick="connection()"><span style="">S'inscrire</span><img src="common/img/login_arrow.png" id="login_arrow"/></button>
 						</div>
-						<div class="button-container">
-							<button type="button" value="inscription" id="inscription" onClick="callAnotherPage('inscription');"><span style="">S'inscrire</span><img src="common/img/login_arrow.png" id="login_arrow"/></button>
-						</div>
+						
 						<!-- <p class="change_link">
 							Pour utiliser cette application, vous devez avoir créé un compte sur
 							<a href="http://www.placedestalents.com" class="to_register">www.placedestalents.com</a>
 						</p> -->
-						<div class="footer" onClick="callAnotherPage('login_forgotPassword');">Mot de passe oublié ?</div>
+
 						
 						
 					</form>
