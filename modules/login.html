@@ -1,0 +1,140 @@
+<div class="connection">
+	<div id="connectionModule">
+		
+		<div id="login" class="animate form">
+			
+			
+			<div class="formulaire">
+				<div class="formulaire_content">
+					
+					<img src="common/img/logo_image.png" alt="logo-appli" id="login_logo"></img>
+					
+					<form class="formulaire_content_fields">
+						
+						<div class="input-container">
+							<input type="text" id="username" required="required"/>
+							<label>Adresse mail</label>
+						</div>
+						
+						<div class="input-container">
+							<input type="password" id="password" required="required"/>
+							<label>Mot de passe</label>
+							<div id="input_password_show" data-val="false">AFFICHER</div>
+						</div>
+						
+						<div id="error_login"></div>
+						
+						<div class="keeplogin"> 
+							
+							<div id="login_check_box" data-checked="false">
+								<img id="login_check_box_enable" src="common/img/login_check-blanc.png" />
+							</div>
+							<div id="keeplogin_label">
+								Mémoriser le mot de passe
+							</div>
+							
+						</div>
+						
+						<div class="button-container">
+							<button type="button" value="Login" id="log" onClick="connection()"><span style="">Se connecter</span><img src="common/img/login_arrow.png" id="login_arrow"/></button>
+						</div>
+						<!-- <p class="change_link">
+							Pour utiliser cette application, vous devez avoir créé un compte sur
+							<a href="http://www.placedestalents.com" class="to_register">www.placedestalents.com</a>
+						</p> -->
+						<div class="footer" onClick="callAnotherPage('login_forgotPassword');">Mot de passe oublié ?</div>
+						
+						
+					</form>
+				</div>
+			</div>
+			
+			
+			
+		</div>	
+	</div>
+	
+	<div id="login_error"></div>
+	
+</div>
+
+<script>
+	//document.addEventListener("deviceready", onDeviceReady, false);
+	
+	
+	$('#login_check_box').click(function()
+	{
+		$('#login_check_box_enable').toggle();
+		
+		if(!$('#login_check_box').data('checked'))
+		{
+			$('#login_check_box').data("checked",true);
+			console.log('true')
+		}
+		else
+		{
+			$('#login_check_box').data("checked",false);
+			console.log('false')
+		}
+		
+	});
+	
+	$('.keeplogin').click(function()
+	{
+		$('#login_check_box_enable').toggle();
+		
+		if(!$('#login_check_box').data('checked'))
+		{
+			$('#login_check_box').data("checked",true);
+			console.log('true')
+		}
+		else
+		{
+			$('#login_check_box').data("checked",false);
+			console.log('false')
+		}
+		
+	});
+	
+	$("#password").on('input',function(e)
+	{
+		$("#input_password_show").show();
+	});
+	
+	$("#input_password_show").click(function()
+	{
+		if(!$('#input_password_show').data('val'))
+		{
+			
+			$("#input_password_show").html('MASQUER');
+			$('#input_password_show').data('val',true);
+			$('#password').attr('type','text');
+		}
+		else
+		{
+			$("#input_password_show").html('AFFICHER');
+			$('#input_password_show').data('val',false);
+			$('#password').attr('type','password');
+		}
+	});
+	
+	
+	$('#corps').on('click', function(e)
+	{
+		if($(e.target).closest('#username').length==1 || $(e.target).closest('#password').length==1) 
+		{
+			console.log($(e.target).closest('#password').length);
+			
+			if($('#login_logo').is(":visible")) {
+				$('#login_logo').slideUp();
+				$('#login_msg_changePwd').slideUp();
+			}
+		}        
+		else
+		{
+			$('#login_logo').show( "slow" );
+			$('#login_msg_changePwd').show( "slow" );
+		}
+	});
+	
+</script>			
